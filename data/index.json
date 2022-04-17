@@ -1,0 +1,215 @@
+{
+  "default": {
+    "fb": "https://www.facebook.com/raul.rodriguesdemoraes/",
+    "ig": "https://www.instagram.com/luarrekcah/",
+    "wpp": "https://wa.me/+556892402096"
+  },
+  "services": [
+    {
+      "icon": "bi bi-globe",
+      "title": "CRIAÇÃO DE SITES",
+      "desc": "Criação de aplicações web, manutenção e outros"
+    },
+    {
+        "icon": "bi bi-vector-pen",
+        "title": "DESIGN GRÁFICO",
+        "desc": "Criação de artes vetoriais e bitmaps para divulgação, tais como artes de crachá, camisas, cartão visitas, fachadas e outros"
+      },
+      {
+        "icon": "bi bi-phone",
+        "title": "CRIAÇÃO DE APPS ANDROID/IOS",
+        "desc": "Desenvolvimento de aplicativos para as plataformas supracitadas e publicação em lojas conhecidas. (PlayStore AppleStore)."
+      },
+      {
+        "icon": "bi bi-building",
+        "title": "ASSESSORIA DE EMPRESAS",
+        "desc": "Faça sua empresa aparecer no Google e ganhar visibilidade."
+      }
+  ],
+  "portfolio": [
+    {
+      "id": "alto-giro-flyer",
+      "title": "Gincana Alto Giro 1 de Maio",
+      "category": "Flyer",
+      "client": "Diego",
+      "date": "...",
+      "desc": "Flyer da gincana em comemoração do aniversário de Acrelândia",
+      "photos": ["/assets/img/alto-giro-gincana.jpg"]
+    },
+    {
+      "id": "amistoso-bandeirantes-granada",
+      "title": "Amistoso Bandeirantes X Granada",
+      "category": "Flyer",
+      "client": "Gênios Publicidade",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/AMISTOSO-BANDEIRANTESxGRANADA.jpg"]
+    },
+    {
+      "id": "terceirao",
+      "title": "Terceirão 2022",
+      "category": "Flyer",
+      "client": "Cauan",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/terceirao.jpg"]
+    },
+    {
+      "id": "ovos-de-colher-da-geh",
+      "title": "Ovos de Colher",
+      "category": "Flyer",
+      "client": "Geh",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/geh.jpg"]
+    },
+    {
+      "id": "natal-solidario",
+      "title": "Natal Solidário",
+      "category": "Flyer",
+      "client": "Alto Giro",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/flyer-natal-solidário-alto-giro.jpg"]
+    },
+    {
+      "id": "dia-consumidor",
+      "title": "Dia do Consumidor",
+      "category": "Flyer",
+      "client": "D Walt Engenharia",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/flyer-dia-consumidor.jpg"]
+    },
+    {
+      "id": "59-anos-acre",
+      "title": "Aniversário do Acre",
+      "category": "Flyer",
+      "client": "D Walt Engenharia",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/flyer-acre.jpg"]
+    },
+    {
+      "id": "banner-viver-bem",
+      "title": "Viver Bem",
+      "category": "Banner",
+      "client": "Viver Bem ",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/viver-bem-banner.jpg"]
+    },
+    {
+      "id": "volta-ao-novo",
+      "title": "Volta ao Novo",
+      "category": "Banner",
+      "client": "Jorge",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/jorge.jpg"]
+    },
+    {
+      "id": "happy-hour",
+      "title": "Happy Hour",
+      "category": "Flyer",
+      "client": "...",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/banner-happy-hour.jpg"]
+    },
+    {
+      "id": "servicos-em-ar",
+      "title": "Serviços em Ar-Condicionado",
+      "category": "flyer",
+      "client": "Tec. Genilson",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/genilson.jpg"]
+    },
+    {
+      "id": "banner-aguia-motos",
+      "title": "Águia Motos",
+      "category": "banner",
+      "client": "Águia Motos",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/aguia-motos-banner.jpg"]
+    },
+    {
+      "id": "panfletos-blackfriday",
+      "title": "Black Friday",
+      "category": "Panfleto",
+      "client": "D Walt Engenharia",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/panfletos-black-friday.png"]
+    },
+    {
+      "id": "acre-grafica-logo",
+      "title": "Logotipo Acre Gráfica",
+      "category": "Logo",
+      "client": "...",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/acregrafica-logo.jpg"]
+    },
+    {
+      "id": "camisa-alto-giro",
+      "title": "Alto Giro",
+      "category": "Camiseta",
+      "client": "...",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/Alto-giro-arte-camiseta.png"]
+    },
+    {
+      "id": "banner-obra-dlwalt",
+      "title": "Obra D Walt Engenharia",
+      "category": "Banner",
+      "client": "D Walt Engenharia",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/banner-obra-dlwalt.jpg"]
+    },
+    {
+      "id": "banner-twitter-ghtx-boy",
+      "title": "Twitter Ghtx_Boy",
+      "category": "Media Banner",
+      "client": "Raul Rodrigues",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/banner-twitter-eu.jpg"]
+    },
+    {
+      "id": "senpai-tech-logo",
+      "title": "Senpai Tech",
+      "category": "Logo",
+      "client": "George",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/SenpaiTech.png"]
+    },
+    {
+      "id": "rosy-store-logo",
+      "title": "Rosy Store",
+      "category": "Logo",
+      "client": "Rosanir",
+      "date": "...",
+      "desc": "...",
+      "photos": ["/assets/img/rosystore.jpg"]
+    }
+  ],
+  "blog": [
+    {
+      "title": "",
+      "banner": "",
+      "tags": [],
+      "content": [
+        {
+          "tag": "p",
+          "content": "aa"
+        }
+      ]
+    }
+  ]
+}
