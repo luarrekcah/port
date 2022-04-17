@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") -%>
+
+  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/hero-bg.jpg)">
+    <div class="overlay-itro"></div>
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <p class="display-6 color-d">Bem vindo!</p>
+          <h1 class="hero-title mb-4">Eu sou Raul Rodrigues</h1>
+          <p class="hero-subtitle"><span class="typed" data-typed-items="Designer Gráfico, Desenvolvedor Back-End, Freelancer"></span></p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    
+  <%- include("components/about.ejs") -%>
+
+  <%- include("components/services.ejs") -%>
+
+  <%- include("components/counters.ejs") -%>
+    
+  <%- include("components/portfolio.ejs") -%>
+
+  <%- include("components/blog.ejs") -%>
+
+  <%- include("components/contact.ejs") -%>
+
+  </main>
+
+<%- include("partials/footer.ejs") -%>

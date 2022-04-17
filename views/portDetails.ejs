@@ -1,0 +1,76 @@
+<%- include("partials/header.ejs") -%>
+
+  <div class="hero hero-single route bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
+    <div class="overlay-mf"></div>
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h2 class="hero-title mb-4">
+            <%= item.title %>
+          </h2>
+          <ol class="breadcrumb d-flex justify-content-center">
+            <li class="breadcrumb-item">
+              <a href="/">Princípio</a>
+            </li>
+            <li class="breadcrumb-item active">
+              <%= item.title %>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <% item.photos.forEach((item, i)=> { %>
+                  <div class="swiper-slide">
+                    <img src="<%=item%>" alt="">
+                  </div>
+                  <% }) %>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Informações do Projeto</h3>
+              <ul>
+                <li><strong>Categoria</strong>: <%= item.category %>
+                </li>
+                <li><strong>Cliente</strong>: <%= item.client %>
+                </li>
+                <li><strong>Data do Projeto</strong>: <%= item.date %>
+                </li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2>
+                <%= item.title %>
+              </h2>
+              <p>
+                <%= item.desc %>
+              </p>
+            </div>
+            
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <%- include("partials/footer.ejs") -%>

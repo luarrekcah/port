@@ -1,0 +1,37 @@
+<!-- ======= Services Section ======= -->
+<section id="services" class="services-mf pt-5 route">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Serviços
+            </h3>
+            <p class="subtitle-a">
+              Especialidades gerais
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <% services.forEach((item, i) => { %>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-ico">
+              <span class="ico-circle"><i class="<%= item.icon %>"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="s-title"><%= item.title %></h2>
+              <p class="s-description text-center">
+                <%= item.desc %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <%})%>
+      </div>
+    </div>
+  </section><!-- End Services Section -->
