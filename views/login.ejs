@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") -%>
+    <div id="hero" class="hero route bg-image" style="background-image: url(https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif)">
+    <div class="overlay-itro"></div>
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h1 >Escolha sua forma de login</h1>
+          <a class="button button-a button-big button-rouded" href="<%=defaultConfig.url%>auth/google" style="margin: 10px" ><i class="bi bi-google"></i> Google</a>
+          <a class="button button-a button-big button-rouded" href="<%=defaultConfig.url%>auth/facebook" style="margin: 10px"><i class="bi bi-facebook"></i> Facebook (em breve)</a>
+          <a class="button button-a button-big button-rouded" href="<%=defaultConfig.url%>auth/twitter" style="margin: 10px"><i class="bi bi-twitter"></i> Twitter (em breve)</a>
+          <a class="button button-a button-big button-rouded" href="<%=defaultConfig.url%>auth/discord" style="margin: 10px"><i class="bi bi-discord"></i> Discord</a>
+          <a class="button button-a button-big button-rouded" href="<%=defaultConfig.url%>auth/github" style="margin: 10px"><i class="bi bi-github"></i> Github (em breve)</a>
+          <hr/>
+          <a class="button button-a button-big button-rouded" href="<%=defaultConfig.url%>auth/default" style="margin: 10px"><i class="bi bi-door-open"></i> Login Clássico (em breve)</a>
+          </div>
+      </div>
+    </div>
+  </div>
+<%- include("partials/footer.ejs") -%>

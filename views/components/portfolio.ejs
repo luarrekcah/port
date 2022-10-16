@@ -4,26 +4,26 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="title-box text-center">
-            <h3 class="title-a">
+            <h3 data-aos="flip-left" class="title-a">
               Portfólio
             </h3>
-            <p class="subtitle-a">
-              
+            <p data-aos="fade-up" class="subtitle-a">
+              Algumas das diversas artes
             </p>
             <div class="line-mf"></div>
           </div>
         </div>
       </div>
       
-      <div class="row">
+      <div class="row glider">
         
         <% port.forEach((item, i)=> { %>
-
-        <div class="col-md-4">
+       <% if(i >= 6 ) return; %>
+        <div data-aos="flip-left" class="col-md-4">
           <div class="work-box">
             <a href="<%= item.photos[0] %>" data-gallery="portfolioGallery" class="portfolio-lightbox">
               <div class="work-img">
-                <img src="<%= item.photos[0] %>" alt="" class="img-fluid">
+                <img src="<%= item.photos[0] %>" loading="lazy" alt="" class="img-fluid">
               </div>
             </a>
             <div class="work-content">
@@ -43,6 +43,8 @@
             </div>
           </div>
         </div>
+              
+          
         <% }) %>
 
         <h2>E muito mais!</h2>

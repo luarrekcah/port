@@ -1,13 +1,13 @@
-<!-- ======= Blog Section ======= -->
+
 <section id="blog" class="blog-mf sect-pt4 route">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <div class="title-box text-center">
-            <h3 class="title-a">
+            <h3 data-aos="flip-left" class="title-a">
               Blog
             </h3>
-            <p class="subtitle-a">
+            <p data-aos="fade-up" class="subtitle-a">
               Um pouco sobre mim e projetos
             </p>
             <div class="line-mf"></div>
@@ -15,45 +15,39 @@
         </div>
       </div>
       <div class="row">
-        <!--ITEM-->
-        <% blog.forEach((item, i ) => { %>
-
-          <% if(i === 0) { %>
-            <h2>Ainda não foi postado nada mai frend :D</h2>
-          <% } else { %>
-            <div class="col-md-4">
+        <% blog.forEach((item, i ) => { %> 
+            <div data-aos="flip-left" class="col-md-4">
               <div class="card card-blog">
                 <div class="card-img">
-                  <a href="blog-single.html"><img src="assets/img/post-1.jpg" alt="" class="img-fluid"></a>
+                  <a href="<%=defaultConfig.url%>blog/<%=item.id%>"><img src="<%= item.banner %>" alt="<%= item.title %>" class="img-fluid"></a>
                 </div>
                 <div class="card-body">
                   <div class="card-category-box">
                     <div class="card-category">
-                      <h6 class="category">Travel</h6>
+                      <h6 class="category"><%= item.tags[0] %></h6>
                     </div>
                   </div>
-                  <h3 class="card-title"><a href="blog-single.html">See more ideas about Travel</a></h3>
+                  <h3 class="card-title"><a href="<%=defaultConfig.url%>blog/<%=item.id%>" style="color: black;"><%= item.title %></a></h3>
                   <p class="card-description">
-                    Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
-                    a pellentesque nec,
-                    egestas non nisi.
+                   <%= item.content[0].content %>
                   </p>
                 </div>
                 <div class="card-footer">
                   <div class="post-author">
-                    <a href="#">
-                      <img src="assets/img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
-                      <span class="author">Morgan Freeman</span>
+                    <a href="#" style="color: black;">
+                      <img src="assets/img/testimonial-2.jpg" alt="Raul Rodrigues" class="avatar rounded-circle">
+                      <span class="author">Raul Rodrigues</span>
                     </a>
                   </div>
                   <div class="post-date">
-                    <span class="bi bi-clock"></span> 10 min
+                    <span class="bi bi-clock"></span> <%= item.date %>
+                     <span class="bi bi-chat-left-text"></span>
+                     <a  style="color: black;" href="<%=defaultConfig.url%>blog/<%=item.id%>#disqus_thread">0</a>
                   </div>
                 </div>
               </div>
             </div>
-          <%}%>
         <%});%>
       </div>
     </div>
-  </section><!-- End Blog Section -->
+  </section>

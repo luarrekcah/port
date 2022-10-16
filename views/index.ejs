@@ -1,13 +1,17 @@
 <%- include("partials/header.ejs") -%>
 
-  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/hero-bg.jpg)">
+  <div id="hero" class="hero route bg-image" style="background-image: url(https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif)">
     <div class="overlay-itro"></div>
     <div class="hero-content display-table">
       <div class="table-cell">
         <div class="container">
-          <p class="display-6 color-d">Bem vindo!</p>
+          <%if(user) { %>    
+          <p class="display-6 color-d" data-aos="fade-down">Bem vindo <%=user.name%>!</p>
+          <%  } else {%>
+          <p class="display-6 color-d" data-aos="fade-down">Bem vindo!</p>
+          <% }%>
           <h1 class="hero-title mb-4">Eu sou Raul Rodrigues</h1>
-          <p class="hero-subtitle"><span class="typed" data-typed-items="Designer Gráfico, Desenvolvedor Back-End, Freelancer"></span></p>
+          <p class="hero-subtitle" data-aos="fade-up"><span class="typed" data-typed-items="Designer Gráfico, Desenvolvedor Back-End, Freelancer"></span></p>
           </div>
       </div>
     </div>
@@ -28,5 +32,24 @@
   <%- include("components/contact.ejs") -%>
 
   </main>
+    
+    <section class="logo-list">
+    <div class="container">
+        <div class="row">
+            <div data-aos="flip-left" class="col-lg-2 col-md-4 col-6">
+                <a href="https://wa.me/+556892228746"><img src="https://cdn.glitch.global/55ea3463-31d7-4807-9eee-98d4f54e9d89/genios-art.png?v=1650419087328" class="img-fluid" alt="Genios Logo"></a>
+            </div>
+           <div data-aos="flip-left" class="col-lg-2 col-md-4 col-6">
+                <a href="https://www.graficainovart.com"><img src="https://cdn.glitch.global/55ea3463-31d7-4807-9eee-98d4f54e9d89/inovart.png?v=1650419087329" class="img-fluid" alt="Inovart Logo"></a>
+            </div>
+          <div data-aos="flip-left" class="col-lg-2 col-md-4 col-6">
+                <a href="https://www.dlwalt.com"><img src="https://cdn.glitch.global/55ea3463-31d7-4807-9eee-98d4f54e9d89/dwalt.png?v=1650419087329" class="img-fluid" alt="D Walt Engenharia Logo"></a>
+            </div>
+          <div data-aos="flip-left" class="col-lg-2 col-md-4 col-6">
+                <a href="https://wa.me/+556899815872"><img src="https://cdn.glitch.global/55ea3463-31d7-4807-9eee-98d4f54e9d89/raifas-logo.png?v=1652304353530" class="img-fluid" alt="Raifas Malharia logo"></a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <%- include("partials/footer.ejs") -%>

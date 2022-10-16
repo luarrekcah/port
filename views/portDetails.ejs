@@ -23,7 +23,7 @@
 
   <main id="main">
 
-    <!-- ======= Portfolio Details Section ======= -->
+  
     <section id="portfolio-details" class="portfolio-details">
       <div class="container">
 
@@ -35,7 +35,7 @@
 
                 <% item.photos.forEach((item, i)=> { %>
                   <div class="swiper-slide">
-                    <img src="<%=item%>" alt="">
+                    <img src="<%=item%>" alt="<%= item.title %>">
                   </div>
                   <% }) %>
               </div>
@@ -69,8 +69,8 @@
         </div>
 
       </div>
-    </section><!-- End Portfolio Details Section -->
+    </section>
 
-  </main><!-- End #main -->
+  </main>
 
   <%- include("partials/footer.ejs") -%>
