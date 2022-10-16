@@ -1,5 +1,6 @@
 {
   "default": {
+    "url": "https://www.devluar.com/",
     "fb": "https://www.facebook.com/raul.rodriguesdemoraes/",
     "ig": "https://www.instagram.com/luarrekcah/",
     "wpp": "https://wa.me/+556892402096"
@@ -11,22 +12,45 @@
       "desc": "Criação de aplicações web, manutenção e outros"
     },
     {
-        "icon": "bi bi-vector-pen",
-        "title": "DESIGN GRÁFICO",
-        "desc": "Criação de artes vetoriais e bitmaps para divulgação, tais como artes de crachá, camisas, cartão visitas, fachadas e outros"
-      },
-      {
-        "icon": "bi bi-phone",
-        "title": "CRIAÇÃO DE APPS ANDROID/IOS",
-        "desc": "Desenvolvimento de aplicativos para as plataformas supracitadas e publicação em lojas conhecidas. (PlayStore AppleStore)."
-      },
-      {
-        "icon": "bi bi-building",
-        "title": "ASSESSORIA DE EMPRESAS",
-        "desc": "Faça sua empresa aparecer no Google e ganhar visibilidade."
-      }
+      "icon": "bi bi-vector-pen",
+      "title": "DESIGN GRÁFICO",
+      "desc": "Criação de artes vetoriais e bitmaps para divulgação, tais como artes de crachá, camisas, cartão visitas, fachadas e outros"
+    },
+    {
+      "icon": "bi bi-phone",
+      "title": "CRIAÇÃO DE APPS ANDROID/IOS",
+      "desc": "Desenvolvimento de aplicativos para as plataformas supracitadas e publicação em lojas conhecidas. (PlayStore AppleStore)."
+    },
+    {
+      "icon": "bi bi-building",
+      "title": "ASSESSORIA DE EMPRESAS",
+      "desc": "Faça sua empresa aparecer no Google e ganhar visibilidade."
+    },
+    {
+      "icon": "bi bi-people",
+      "title": "Pacotes de Mídia Social",
+      "desc": "Compra de seguidores, curtidas e visualizações em redes sociais."
+    }
   ],
   "portfolio": [
+    {
+      "id": "camisetas-raifas",
+      "title": "Camisetas Gerais",
+      "category": "Flyer",
+      "client": "Raifas Malharia e outros",
+      "date": "03/06/2022",
+      "desc": "Camisetas solicitadas pela Raifas Malharia e outros clientes",
+      "photos": ["https://cdn.glitch.global/55ea3463-31d7-4807-9eee-98d4f54e9d89/lapeste-preview.jpg?v=1654534551627", "https://cdn.glitch.global/55ea3463-31d7-4807-9eee-98d4f54e9d89/unidet-preview.jpg?v=1654534577785", "https://cdn.glitch.global/55ea3463-31d7-4807-9eee-98d4f54e9d89/congresso.jpg?v=1654534805373", "https://cdn.glitch.global/55ea3463-31d7-4807-9eee-98d4f54e9d89/sfc.jpg?v=1654534805063", "https://cdn.glitch.global/55ea3463-31d7-4807-9eee-98d4f54e9d89/jfs.jpg?v=1654534804559"]
+    },
+    {
+      "id": "rifa-namorados",
+      "title": "Dia dos Namorados Rifa",
+      "category": "Flyer",
+      "client": "Alunos MPS",
+      "date": "03/06/2022",
+      "desc": "Flyer de contribuição para Rifa do dia dos namorados na MPS.",
+      "photos": ["https://cdn.glitch.global/55ea3463-31d7-4807-9eee-98d4f54e9d89/rifa-namorados.jpg?v=1654534278820"]
+    },
     {
       "id": "alto-giro-flyer",
       "title": "Gincana Alto Giro 1 de Maio",
@@ -201,13 +225,31 @@
   ],
   "blog": [
     {
-      "title": "",
-      "banner": "",
-      "tags": [],
+      "id": "criacao-do-site",
+      "title": "Portfólio Novo Galerinha!",
+      "banner": "https://cdn.glitch.global/55ea3463-31d7-4807-9eee-98d4f54e9d89/a27d5ebb-61fa-4543-be36-7bbcae076e38.image.png?v=1651459431773",
+      "tags": ["Sobre o Criador"],
+      "date": "17 de Abril, 22",
       "content": [
         {
           "tag": "p",
-          "content": "aa"
+          "content": "Esse portfólio começou quando eu finalmente decidi investir em mim e no conhecimento que eu tinha."
+        },
+        {
+          "tag": "p",
+          "content": "Foi em um belo dia, eu estava vendo algumas referências na internet de profissionais, então pensei:"
+        },
+        {
+          "tag": "blockquote",
+          "content": "Eu preciso de um site."
+        },
+        {
+          "tag": "p",
+          "content": "Tanto para apresentar meu trabalho, quanto demonstrar profissionalismo. e é isso que vou sempre proporcionar aos meus clientes."
+        },
+        {
+          "tag": "p",
+          "content": "Inclusive, no desenvolvimento desse site, foi utilizado EJS, Express e algumas outras dependências."
         }
       ]
     }

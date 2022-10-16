@@ -1,0 +1,567 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="novoPedido"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="novoPedidoLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content" style="background-color: black">
+      <div class="modal-header">
+        <h5 class="modal-title" id="novoPedidoLabel">Nova Solicitação</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          style="background-color: #fff"
+        ></button>
+      </div>
+      <div class="modal-body">
+          <h4>Formulário</h4>
+          <hr />
+          <p>Detalhes de Contato</p>
+          <p></p>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Seu E-mail:</span>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="contato@devluar.com"
+              aria-label="email"
+              id="email"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"
+              >Nome da sua empresa:</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Raul Rodrigues"
+              aria-label="a"
+              id="nomeEmpresa"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"
+              >Site da Empresa:</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              placeholder="www.devluar.com"
+              aria-label="a"
+              id="site"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"
+              >Número Celular:</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              placeholder="+55 68 9.XXXX-XXXX"
+              aria-label="a"
+              id="numero"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"
+              >Como me encontrou?</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="comoMeEncontrou"
+              placeholder="Google, Whatsapp, Amigos..."
+              aria-label="a"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+
+          <hr />
+          <p>Informações Básicas</p>
+        
+        <div class="mb-3">
+            <h6>
+              Dê um título de identificação ao seu pedido
+            </h6>
+            <textarea
+              class="form-control"
+              id="title"
+              placeholder="Artes Flyer"
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Escreva algo no objetivo do projeto.
+            </div>
+          </div>
+
+          <h6>Este é um projeto novo ou redesenho?</h6>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="novoOuRedesenho"
+              id="novoOuRedesenho1"
+              checked
+            />
+            <label class="form-check-label" for="novoOuRedesenho1">
+              Projeto Novo
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="novoOuRedesenho"
+              id="novoOuRedesenho2"
+            />
+            <label class="form-check-label" for="novoOuRedesenho2">
+              Redesenho
+            </label>
+          </div>
+
+          <h6>Quando precisa do projeto pronto?</h6>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="tempo"
+              id="tempo1"
+            />
+            <label class="form-check-label" for="tempo1"> Em 2 meses </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="tempo"
+              id="tempo2"
+            />
+            <label class="form-check-label" for="tempo2"> Em 1 mês </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="tempo"
+              id="tempo3"
+            />
+            <label class="form-check-label" for="tempo3"> Indefinido </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="tempo"
+              id="tempo4"
+              checked
+            />
+            <label class="form-check-label" for="tempo4"> Urgente </label>
+          </div>
+          <i
+            >Em caso de urgência, pode-se levar de 30 minutos à 4 horas
+            (design). Consulte horários de disponibilidade.</i
+          >
+
+          <p></p>
+          <div class="mb-3">
+            <h6>
+              Por que você precisa deste projeto? Quais são seus objetivos?
+            </h6>
+            <textarea
+              class="form-control"
+              id="objetivo"
+              placeholder="Desejo apresentar conteúdo de alta qualidade para meu clientes, com o objetivo de atrair e fechar vendas."
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Escreva algo no objetivo do projeto.
+            </div>
+          </div>
+
+          <hr />
+
+          <p>Lista de Entrega</p>
+
+          <h6>Selecione os itens necessários</h6>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              id="sitecheck"
+              type="checkbox"
+              value=""
+            />
+            <label class="form-check-label" for="flexCheckDefault">
+              Site
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              id="logo"
+              type="checkbox"
+              value=""
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Logo
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              id="cardapioOuImpressos"
+              type="checkbox"
+              value=""
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Cardápio ou impressos em forma digital (com botões)
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              id="redesKit"
+              type="checkbox"
+              value=""
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Kit Redes sociais (instagram, facebook e outros)
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              id="flyer"
+              type="checkbox"
+              value=""
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Flyer
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              id="cracha"
+              type="checkbox"
+              value=""
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Crachá
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              id="cartaoVisitas"
+              type="checkbox"
+              value=""
+            />
+            <label class="form-check-label" for="flexCheckChecked">
+              Cartão Visitas (código QR/NFC)
+            </label>
+          </div>
+
+          <div class="mb-3">
+            <h6>Informações extras sobre a lista de entrega</h6>
+            <i
+              >Utilize este campo para me dizer se faltou algum item ou forneça
+              detalhes sobre os itens selecionados.</i
+            >
+            <textarea
+              class="form-control"
+            
+              id="extrasEntrega"
+              placeholder="Quero fazer um arquivo em pdf com alguns botões interativos, tais como..."
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Escreva algo no objetivo do projeto.
+            </div>
+          </div>
+
+          <hr />
+
+          <p>Perfil da Empresa</p>
+
+          <div class="mb-3">
+            <h6>Me fale sobre sua empresa</h6>
+            <i
+              >Do que ela se trata? Quais são os produtos/serviços oferecidos?
+              Há quanto tempo existe? Qual sua missão, visão e valores?</i
+            >
+            <textarea
+              class="form-control"
+             
+              id="sobreEmpresa"
+              placeholder="Minha empresa é sobre serragens e fornecimento de materiais..."
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Escreva algo no objetivo do projeto.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h6>Descreva seu negócio em 2 palavras</h6>
+            <textarea
+              class="form-control"
+            
+              placeholder="Projeto e Construção"
+              id="descDois"
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Escreva algo no objetivo do projeto.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h6>Descreva seu negócio em 1 palavra</h6>
+            <textarea
+              class="form-control"
+             
+              id="descUm"
+              placeholder="Serralheria"
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Escreva algo no objetivo do projeto.
+            </div>
+          </div>
+
+          <hr />
+
+          <p>Sobre seus clientes</p>
+
+          <div class="mb-3">
+            <h6>
+              Descreva o máximo que puder sobre seus clientes. Gênero, idade,
+              região, poder aquisitivo, etc.
+            </h6>
+            <textarea
+              class="form-control"
+              id="sobreClientes"
+              placeholder=""
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Escreva algo no objetivo do projeto.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h6>Que mensagens sua marca deve transmitir para seus clientes?</h6>
+            <textarea
+              class="form-control"
+             
+              id="deveTransmitir"
+              placeholder="Somos populares, porém informativos e intelectuais."
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Escreva algo no objetivo do projeto.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h6>
+              Que mensagens sua marca NÃO deve transmitir para seus clientes?
+            </h6>
+            <textarea
+              class="form-control"
+              
+              id="naoTransmitir"
+              placeholder="Não somos conservadores ou engraçados."
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Escreva algo no objetivo do projeto.
+            </div>
+          </div>
+
+          <hr />
+          <p>Sobre seus concorrentes</p>
+
+          <div class="mb-3">
+            <h6>
+              Liste seus concorrentes locais, regionais e/ou mundiais. Forneça
+              URL's (links) se possível.
+            </h6>
+            <textarea
+              class="form-control"
+               
+              placeholder=""
+              id="concorrentes"
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Escreva algo no objetivo do projeto.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h6>O que o difere dos seus concorrentes?</h6>
+            <textarea
+              class="form-control"
+              
+              id="difereConcorrente"
+              placeholder=""
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Escreva algo no objetivo do projeto.
+            </div>
+          </div>
+
+          <hr />
+          <p>Imagem a ser projetada</p>
+          <p>
+            Me ajude a entender como sua marca deve se comportar visualmente
+            fornecendo algumas características. 
+          </p>
+
+          <div class="mb-3">
+            <h6>Características da marca</h6>
+            <textarea
+              class="form-control"
+               
+              id="caractMarca"
+              placeholder="Moderno, Sério, Popular, Pesado, Conservador, Descontraido, Singular, Leve."
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Escreva algo no objetivo do projeto.
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="mb-3">
+            <h6>Ainda tem algo a dizer?</h6>
+            <i>Fique à vontade para contribuir com outras informações.</i>
+            <textarea
+              class="form-control"
+
+              id="maisInfos"
+              placeholder=""
+              required
+            ></textarea>
+            <div class="invalid-feedback">
+              Escreva algo no objetivo do projeto.
+            </div>
+          </div>
+
+          <p></p>
+          <p></p>
+
+          <input
+            class="button button-a button-big button-rouded"
+            value="Enviar"
+                 type="button"
+                 id="sendAll"
+          />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  document.getElementById("sendAll").addEventListener("click", () => {
+    
+    const checkBoxes = () => {
+      
+      let boxesData = {};
+      
+      if(document.getElementById("novoOuRedesenho1").checked) {
+        boxesData['novoOuExistente'] = "Novo";
+      } else {
+        boxesData['novoOuExistente'] = "Redesenho";
+      }
+      
+      if(document.getElementById("tempo1").checked) {
+        boxesData['tempo'] = "2 Meses";
+      } else if (document.getElementById("tempo2").checked) {
+        boxesData['tempo'] = "1 Mês";
+      } else if (document.getElementById("tempo3").checked) {
+        boxesData['tempo'] = "Indefinido";
+      } else {
+        boxesData['tempo'] = "Urgente";
+      }
+      
+      return boxesData;
+    }
+    
+    
+    const data = {
+    email: document.getElementById("email").value,
+    nomeEmpresa: document.getElementById("nomeEmpresa").value,
+    site: document.getElementById("site").value,
+    numero: document.getElementById("numero").value,
+    cmoEncontrou: document.getElementById("comoMeEncontrou").value,
+    title: document.getElementById("title").value,
+    checkBoxes: checkBoxes(),
+    objetivo: document.getElementById("objetivo").value,
+    itens: {
+      site: document.getElementById("sitecheck").checked,
+      logo: document.getElementById("logo").checked,
+      cardapioOuImpr: document.getElementById("cardapioOuImpressos").checked,
+      redesKit: document.getElementById("redesKit").checked,
+      flyer: document.getElementById("flyer").checked,
+      cracha: document.getElementById("cracha").checked,
+      cartaoVisitas: document.getElementById("cartaoVisitas").checked
+    },
+      extrasEntregas: document.getElementById("extrasEntrega").value,
+      sobreEmpresa: document.getElementById("sobreEmpresa").value,
+      descDois: document.getElementById("descDois").value,
+      descUm: document.getElementById("descUm").value,
+      sobreClientes: document.getElementById("sobreClientes").value,
+      deveTransmitir: document.getElementById("deveTransmitir").value,
+      naoTransmitir: document.getElementById("naoTransmitir").value,
+      concorrentes: document.getElementById("concorrentes").value,
+      difereConcorrentes: document.getElementById("difereConcorrente").value,
+      caractMarca: document.getElementById("caractMarca").value,
+      maisInfos: document.getElementById("maisInfos").value,
+      authorId: "<%=user.userid%>",
+      id: "<%=pedidos.length + user.userid%>",
+      status: "an",
+      hora: moment().format(),
+      aprovado: false,
+      downloadURL: "",
+      previewURL: ""
+  };
+    
+  console.log(data);
+  axios.post('/dashboard/registrarPedido', data).then(r => console.log(r))
+  .catch((error) =>{
+    console.log(error);
+  });
+  });
+</script>

@@ -1,0 +1,75 @@
+<%- include("partials/header.ejs") -%>
+   <div id="hero" class="hero route bg-image" style="background-image: url(https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif); height: 50vh; border-radius: 0px 0px 25px 25px;">
+    <div class="overlay-itro"></div>
+    <div class="hero-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <p class="display-6 color-d">Pedido <%=pedido.title%></p>
+            <% if(pedido.status === 'an') { %> 
+           <p class="hero-subtitle"><span class="typed" data-typed-items="Em análise"></span></p>
+           <% } else if(pedido.status === 'pen') { %>
+             <p class="hero-subtitle"><span class="typed" data-typed-items="Pendente"></span></p>
+          <% } else if(pedido.status === 'agAp') { %>
+              <p class="hero-subtitle"><span class="typed" data-typed-items="Aguardando Aprovação"></span></p>
+         <% } else if(pedido.status === 'agPay') { %>
+              <p class="hero-subtitle"><span class="typed" data-typed-items="Aguardando Pagamento"></span></p>
+         <% } else if(pedido.status === 'fin') {  %>
+            <p class="hero-subtitle"><span class="typed" data-typed-items="Conluído"></span></p>
+           <% } %>
+          </div>
+      </div>
+    </div>
+  </div>
+    
+    
+     <main id="main">
+       <div class="container">
+        <div class="row" style="padding-top: 40px">
+          <div class="card-body" 
+               style="background-color: #12151e; padding: 50px; border-radius: 40px">
+               <h4 class="card-title"><%=pedido.title%> - Informações Básicas</h4>
+               <p class="card-description"> ID do pedido: <code><%=pedido.id%></code> / Id do usuário: <code><%=pedido.authorId%></code> / <%=pedido.hora%></p>
+               <p>
+               Tipo de Projeto: <%=pedido.checkBoxes.novoOuExistente%>.  
+               </p>
+              <p>
+               Tempo Solicitado: <%=pedido.checkBoxes.tempo%>.  
+              </p>
+                <hr/>
+              <h4>
+                Preview
+              </h4>
+                 <button class="button button-a button-big button-rouded">
+                   Ver preview
+                 </button>
+                 <p>
+                   
+                 </p>
+                 <hr/>
+                 <h4>
+                   Informações do Pedido
+                 </h4>
+                 <p>
+                   Informações Extras: <%=pedido.extrasEntregas%>
+                 </p>
+                    <p>
+                   <%=pedido.maisInfos%>
+                 </p>
+                      
+                      <hr/>
+                     
+                  <button class="button button-a button-big button-rouded">
+                   Finalizar pedido
+                 </button>
+                <i>Finalize após aprovar o projeto, então será redirecionado para pagamentos</i>
+          </div>
+        </div>
+       </div>  
+       
+     </main>
+     
+     
+     
+     
+     
+<%- include("partials/footer.ejs") -%>

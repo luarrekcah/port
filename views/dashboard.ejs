@@ -1,0 +1,193 @@
+<%- include("partials/header.ejs") -%> 
+  <%-
+include("components/modals/novoPedido.ejs") -%>
+
+<div
+  id="hero"
+  class="hero route bg-image"
+  style="
+    background-image: url(https://i.pinimg.com/originals/e4/26/70/e426702edf874b181aced1e2fa5c6cde.gif);
+    height: 50vh;
+    border-radius: 0px 0px 25px 25px;
+  "
+>
+  <div class="overlay-itro"></div>
+  <div class="hero-content display-table">
+    <div class="table-cell">
+      <div class="container">
+        <p class="display-6 color-d">Dashboard do Usuário</p>
+
+        <p class="hero-subtitle">
+          <span
+            class="typed"
+            data-typed-items="Solicite Projetos, Acompanhe"
+          ></span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  th,
+  td {
+    color: #6c7293;
+    border-color: #212529;
+  }
+</style>
+
+<main id="main">
+  <div class="container">
+    <div class="row" style="padding-top: 40px">
+      <div
+        class="card-body"
+        style="background-color: #12151e; padding: 50px; border-radius: 40px"
+      >
+        <h4 class="card-title">Pedidos - Arte Gráfica</h4>
+        <p class="card-description">
+          Status de Projetos Solicitados <code>:D</code>
+        </p>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Título</th>
+                <th>Status</th>
+                <th>Botões</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if(pedidos.length === 0) { %>
+              <h6>
+                Nenhum pedido existente. Para fazer um pedido, clique em "Novo
+                Pedido" e siga o formulário.
+              </h6>
+              <% } %> <% pedidos.forEach((item, i) => { %>
+
+              <tr>
+                <td><%= item.title %></td>
+                <% if(item.status === 'an') { %>
+                <td>
+                  <label class="badge bg-warning" style="color: black"
+                    >Em Análise</label
+                  >
+                </td>
+                <% } else if(item.status === 'pen') { %>
+                <td><label class="badge bg-danger">Pendente</label></td>
+                <% } else if(item.status === 'agAp') { %>
+                <td>
+                  <label class="badge bg-danger">Aguardando Aprovação</label>
+                </td>
+                <% } else if(item.status === 'agPay') { %>
+                <td>
+                  <label class="badge bg-warning" style="color: black"
+                    >Aguardando Pagamento</label
+                  >
+                </td>
+                <% } else if(item.status === 'fin') { %>
+                <td><label class="badge bg-success">Concluído</label></td>
+                <% } %>
+                <td>
+                  <a href="dashboard/projeto/<%= item.id %>/detalhes"
+                    ><i class="bi bi-eye"></i
+                  ></a>
+                  <a
+                    href="dashboard/projeto/<%= item.id %>/download"
+                    style="margin-left: 20px; color: white"
+                    ><i class="bi bi-download"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <% }); %>
+            </tbody>
+          </table>
+          <div class="table-footer">
+            <a
+              class="button button-a button-big button-rouded"
+              data-bs-toggle="modal"
+              data-bs-target="#novoPedido"
+              >Novo Pedido</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card-body"
+        style="
+          background-color: #12151e;
+          margin-top: 10px;
+          padding: 50px;
+          border-radius: 40px;
+        "
+      >
+        <h4 class="card-title">Pedidos - Followers System</h4>
+        <p class="card-description">
+          Status de Follows Solicitados <code>EM DESENVOLVIMENTO</code>
+        </p>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Título</th>
+                <th>Status</th>
+                <th>Botões</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if(pedidos.length === 0) { %>
+              <h6>
+                Nenhum pedido existente. Para fazer um pedido, clique em "Novo
+                Pedido" e siga o formulário.
+              </h6>
+              <% } %> <% pedidos.forEach((item, i) => { %>
+
+              <tr>
+                <td><%= item.title %></td>
+                <% if(item.status === 'an') { %>
+                <td>
+                  <label class="badge bg-warning" style="color: black"
+                    >Em Análise</label
+                  >
+                </td>
+                <% } else if(item.status === 'pen') { %>
+                <td><label class="badge bg-danger">Pendente</label></td>
+                <% } else if(item.status === 'agAp') { %>
+                <td>
+                  <label class="badge bg-danger">Aguardando Aprovação</label>
+                </td>
+                <% } else if(item.status === 'agPay') { %>
+                <td>
+                  <label class="badge bg-warning" style="color: black"
+                    >Aguardando Pagamento</label
+                  >
+                </td>
+                <% } else if(item.status === 'fin') { %>
+                <td><label class="badge bg-success">Concluído</label></td>
+                <% } %>
+                <td>
+                  <a href="dashboard/projeto/<%= item.id %>/detalhes"
+                    ><i class="bi bi-eye"></i
+                  ></a>
+                  <a
+                    href="dashboard/projeto/<%= item.id %>/download"
+                    style="margin-left: 20px; color: white"
+                    ><i class="bi bi-download"></i
+                  ></a>
+                </td>
+              </tr>
+
+              <% }); %>
+            </tbody>
+          </table>
+          <div class="table-footer">
+            <a class="button button-a button-big button-rouded">Novo Pedido</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include("partials/footer.ejs") -%>

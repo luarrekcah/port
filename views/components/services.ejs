@@ -1,14 +1,14 @@
-<!-- ======= Services Section ======= -->
+
 <section id="services" class="services-mf pt-5 route">
     <div class="container">
 
       <div class="row">
         <div class="col-sm-12">
           <div class="title-box text-center">
-            <h3 class="title-a">
+            <h3 data-aos="flip-left" class="title-a">
               Serviços
             </h3>
-            <p class="subtitle-a">
+            <p data-aos="fade-up" class="subtitle-a">
               Especialidades gerais
             </p>
             <div class="line-mf"></div>
@@ -18,7 +18,7 @@
       
       <div class="row">
         <% services.forEach((item, i) => { %>
-        <div class="col-md-4">
+        <div data-aos="flip-left" class="col-md-4">
           <div class="service-box">
             <div class="service-ico">
               <span class="ico-circle"><i class="<%= item.icon %>"></i></span>
@@ -34,4 +34,4 @@
         <%})%>
       </div>
     </div>
-  </section><!-- End Services Section -->
+  </section>

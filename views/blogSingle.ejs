@@ -5,15 +5,15 @@
     <div class="hero-content display-table">
       <div class="table-cell">
         <div class="container">
-          <h2 class="hero-title mb-4"><%= title%></h2>
+          <h2 class="hero-title mb-4"><%= og.title%></h2>
           <ol class="breadcrumb d-flex justify-content-center">
             <li class="breadcrumb-item">
               <a href="/">Princípio</a>
             </li>
             <li class="breadcrumb-item">
-              <a href="#">Library</a>
+              <a href="#">Blog</a>
             </li>
-            <li class="breadcrumb-item active"><%= title%></li>
+            <li class="breadcrumb-item active"><%= post.title%></li>
           </ol>
         </div>
       </div>
@@ -22,17 +22,16 @@
 
   <main id="main">
 
-    <!-- ======= Blog Single Section ======= -->
     <section class="blog-wrapper sect-pt4" id="blog">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
             <div class="post-box">
               <div class="post-thumb">
-                <img src="assets/img/post-1.jpg" class="img-fluid" alt="">
+                <img src="<%= post.banner %>" class="img-fluid" alt="">
               </div>
               <div class="post-meta">
-                <h1 class="article-title">Lorem ipsum dolor sit amet consec tetur adipisicing</h1>
+                <h1 class="article-title"><%= post.title%></h1>
                 <ul>
                   <li>
                     <span class="bi bi-person"></span>
@@ -40,66 +39,57 @@
                   </li>
                   <li>
                     <span class="bi bi-tag"></span>
-                    <a href="#">Web Design</a>
+                    <a href="#"><%= post.tags.join(",")%></a>
                   </li>
                   <li>
                     <span class="bi bi-chat-left-text"></span>
-                    <a href="#">14</a>
+                    <a href="<%=defaultConfig.url%>blog/<%=post.id%>#disqus_thread">0</a>
                   </li>
                 </ul>
               </div>
               <div class="article-content">
-                <p>
-                  Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum
-                  porta. Quisque velit
-                  nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque
-                  nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                  Nulla quis lorem ut libero malesuada feugiat.
-                </p>
-                <p>
-                  Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Mauris blandit
-                  aliquet elit, eget tincidunt
-                  nibh pulvinar a. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Donec sollicitudin molestie malesuada.
-                </p>
-                <p>
-                  Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Praesent
-                  sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-                  sem. Donec rutrum congue leo eget malesuada.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat.
-                  Curabitur arcu erat,
-                  accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor
-                  volutpat. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium
-                  ut lacinia in, elementum id enim.
-                </p>
-                <blockquote class="blockquote">
-                  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                </blockquote>
-                <p>
-                  Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Mauris blandit
-                  aliquet elit, eget tincidunt
-                  nibh pulvinar a. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Donec sollicitudin molestie malesuada.
-                </p>
+                <% post.content.forEach((item, i) => { %>
+                  <% if(item.tag === "p") { %>
+                     <p><%=item.content%></p>
+                  <% } %>
+                  <% if(item.tag === "blockquote") { %>
+                    <blockquote class="blockquote">
+                     <p class="mb-0">&ldquo;<%=item.content%>&rdquo;</p>
+                    </blockquote>
+                  <% } %>
+                  <% })%>
               </div>
             </div>
             <div class="box-comments">
-              COLOCAR DISBOARD
+              <div id="disqus_thread"></div>
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://raul-rodrigues.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
             
           </div>
           <div class="col-md-4">
             <div class="widget-sidebar sidebar-search">
-              <h5 class="sidebar-title">Search</h5>
+              <h5 class="sidebar-title">Pesquisa</h5>
               <div class="sidebar-content">
                 <form>
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+                    <input type="text" class="form-control" placeholder="Pesquisar no site..." aria-label="Pesquisar no site...">
                     <span class="input-group-btn">
                       <button class="btn btn-secondary btn-search" type="button">
                         <span class="bi bi-search"></span>
@@ -113,21 +103,11 @@
               <h5 class="sidebar-title">Posts Recentes</h5>
               <div class="sidebar-content">
                 <ul class="list-sidebar">
+                   <% allPosts.forEach((item, i) => { %>
                   <li>
-                    <a href="#">Atque placeat maiores.</a>
+                    <a href="/blog/<%=item.id%>"><%=item.title%></a>
                   </li>
-                  <li>
-                    <a href="#">Lorem ipsum dolor sit amet consectetur</a>
-                  </li>
-                  <li>
-                    <a href="#">Nam quo autem exercitationem.</a>
-                  </li>
-                  <li>
-                    <a href="#">Atque placeat maiores nam quo autem</a>
-                  </li>
-                  <li>
-                    <a href="#">Nam quo autem exercitationem.</a>
-                  </li>
+                 <%})%>
                 </ul>
               </div>
             </div>
@@ -135,20 +115,9 @@
               <h5 class="sidebar-title">Arquivos</h5>
               <div class="sidebar-content">
                 <ul class="list-sidebar">
+                  
                   <li>
-                    <a href="#">September, 2017.</a>
-                  </li>
-                  <li>
-                    <a href="#">April, 2017.</a>
-                  </li>
-                  <li>
-                    <a href="#">Nam quo autem exercitationem.</a>
-                  </li>
-                  <li>
-                    <a href="#">Atque placeat maiores nam quo autem</a>
-                  </li>
-                  <li>
-                    <a href="#">Nam quo autem exercitationem.</a>
+                    <a href="#">Nada ainda :D</a>
                   </li>
                 </ul>
               </div>
@@ -157,24 +126,11 @@
               <h5 class="sidebar-title">Tags</h5>
               <div class="sidebar-content">
                 <ul>
+                   <% post.tags.forEach((item, i) => { %>
                   <li>
-                    <a href="#">Web.</a>
+                    <a href="#"><%=item%></a>
                   </li>
-                  <li>
-                    <a href="#">Design.</a>
-                  </li>
-                  <li>
-                    <a href="#">Travel.</a>
-                  </li>
-                  <li>
-                    <a href="#">Photoshop</a>
-                  </li>
-                  <li>
-                    <a href="#">Corel Draw</a>
-                  </li>
-                  <li>
-                    <a href="#">JavaScript</a>
-                  </li>
+                 <%})%>
                 </ul>
               </div>
             </div>
@@ -184,5 +140,39 @@
     </section><!-- End Blog Single Section -->
 
   </main><!-- End #main -->
-
+                <script type=”application/ld+json”>
+{
+“@context”: “http://schema.org”,
+“@type”: “BlogPosting”,
+“mainEntityOfPage”:{
+“@type”:”WebPage”,
+“@id”:”<%=defaultConfig.url%>blog/<%=post.id%>”
+},
+“headline”: “<%= post.title%>”,
+“image”: {
+“@type”: “ImageObject”,
+“url”: “<%= post.banner %>”,
+“height”: 463,
+“width”: 700
+},
+“datePublished”: “2022-05-07”,
+“dateModified”: “2022-05-07”,
+“author”: {
+“@type”: “Person”,
+“name”: “Raul Rodrigues de Moraes”
+},
+“publisher”: {
+“@type”: “Organization”,
+“name”: “RR - Raul Rodrigues”,
+“logo”: {
+“@type”: “ImageObject”,
+“url”: “https://www.devluar.com/assets/img/logo.png”,
+“width”: 550,
+“height”: 60
+}
+},
+“description”: “<%= post.content[0]%>”
+}
+</script>
+                
 <%- include("partials/footer.ejs") -%>

@@ -10,12 +10,25 @@
   "author": "raulrodrigues",
   "license": "ISC",
   "dependencies": {
+    "@firebase/app": "^0.7.28",
+    "@firebase/auth": "^0.20.5",
     "cookie-parser": "^1.4.6",
-    "ejs": "^3.0.2",
-    "express": "^4.17.3",
-    "firebase": "^9.6.11",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "find-or-create": "^2.0.0",
+    "firebase": "^9.9.0",
     "http-errors": "^2.0.0",
+    "mongoose": "^6.4.3",
     "morgan": "^1.10.0",
-    "path": "^0.12.7"
+    "passport": "^0.6.0",
+    "passport-discord": "^0.1.4",
+    "passport-facebook": "^3.0.0",
+    "passport-github": "^1.1.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-twitter": "^1.0.4",
+    "path": "^0.12.7",
+    "fs": "^0.0.2",
+    "mercadopago": "^1.5.14"
   }
 }
